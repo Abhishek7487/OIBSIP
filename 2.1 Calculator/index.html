@@ -20,43 +20,45 @@
     <!-- Calculator -->
     <div class="calc">
       <div class="blob"></div>
-      <div class="displayScreen"></div>
+      <div class="displayScreen">
+        <input class="ans" value=""></input>
+      </div>
       <div class="calcBtns">
-        <button>AC</button>
-        <button>
+        <button onclick="clean()">AC</button>
+        <button onclick="insert('%')">
           <i class="fa-solid fa-percent"></i>
         </button>
-        <button>
+        <button onclick="insert('/')">
           <i class="fa-solid fa-divide"></i>
         </button>
-        <button>
+        <button onclick="back()">
           <i class="fa-solid fa-backward-step"></i>
         </button>
 
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>
+        <button onclick="insert('7')">7</button>
+        <button onclick="insert('8')">8</button>
+        <button onclick="insert('9')">9</button>
+        <button onclick="insert('*')">
           <i class="fa-solid fa-xmark"></i>
         </button>
 
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>
+        <button onclick="insert('4')">4</button>
+        <button onclick="insert('5')">5</button>
+        <button onclick="insert('6')">6</button>
+        <button onclick="insert('-')">
           <i class="fa-solid fa-minus"></i>
         </button>
 
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>
+        <button onclick="insert('1')">1</button>
+        <button onclick="insert('2')">2</button>
+        <button onclick="insert('3')">3</button>
+        <button onclick="insert('+')">
           <i class="fa-solid fa-plus"></i>
         </button>
 
-        <button>0</button>
-        <button>.</button>
-        <button class="equals">
+        <button onclick="insert('0')">0</button>
+        <button onclick="insert('.')">.</button>
+        <button class="equals" onclick="equals()">
           <i class="fa-solid fa-equals"></i>
         </button>
       </div>

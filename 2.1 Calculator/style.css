@@ -55,10 +55,6 @@ body {
   transform: translateX(-50%);
 }
 
-.displayScreen {
-  height: 35%;
-}
-
 .calcBtns {
   height: 65%;
   background-color: var(--color-main-light);
@@ -84,4 +80,25 @@ body {
   grid-column: span 2;
   border-radius: 1rem;
   width: 100%;
+}
+
+.displayScreen {
+  height: 35%;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+
+.ans {
+  width: 100%;
+  padding: 2rem;
+  text-align: end;
+  font-size: 5.2rem;
+  background-color: var(--color-main-dark);
+  border: none;
+  color: var(--color-primary);
+}
+
+.ans:focus {
+  outline: none;
 }
