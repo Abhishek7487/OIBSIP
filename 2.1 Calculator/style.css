@@ -37,6 +37,7 @@ body {
   background-color: var(--color-main-dark);
   height: 60rem;
   width: 32rem;
+  margin: auto;
   border-radius: 2.6rem;
   border: 0.2rem solid var(--color-primary);
   position: relative;
@@ -74,6 +75,11 @@ body {
   font-size: 2rem;
   font-family: "Outfit";
   border: 0;
+  transition: all 0.2s;
+}
+
+.calcBtns button:active {
+  box-shadow: 0 0 1rem #fff;
 }
 
 .calcBtns .equals {
