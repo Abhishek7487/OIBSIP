@@ -1,6 +1,16 @@
 /* Importing Font family */
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600&display=swap");
 
+/* Variables */
+:root {
+  --color-main-dark: #352d4c;
+  --color-main-mid: #504967;
+  --color-main-light: #3b315c;
+  --color-primary: #ebff03;
+}
+
+/* Global Styles */
+
 * {
   padding: 0;
   margin: 0;
@@ -12,15 +22,66 @@ html {
   font-family: "Outfit", sans-serif;
 }
 
-/* Variables */
-:root {
-  --color-main-dark: #352d4c;
-  --color-main-mid: #504967;
-  --color-main-light: #3b315c;
-  --color-primary: #ebff03;
-}
-
 body {
+  height: 100vb;
   background-color: var(--color-main-mid);
   color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Calculator Styles */
+
+.calc {
+  background-color: var(--color-main-dark);
+  height: 60rem;
+  width: 32rem;
+  border-radius: 2.6rem;
+  border: 0.2rem solid var(--color-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.blob {
+  height: 1rem;
+  width: 1rem;
+  padding: 1.3rem 6rem;
+  border-radius: 2rem;
+  background-color: var(--color-main-mid);
+  position: absolute;
+  top: 1.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.displayScreen {
+  height: 35%;
+}
+
+.calcBtns {
+  height: 65%;
+  background-color: var(--color-main-light);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  padding: 1.6rem;
+  gap: 1rem;
+}
+
+.calcBtns button {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  background-color: var(--color-main-mid);
+  color: var(--color-primary);
+  font-size: 2rem;
+  font-family: "Outfit";
+  border: 0;
+}
+
+.calcBtns .equals {
+  grid-column: span 2;
+  border-radius: 1rem;
+  width: 100%;
 }
