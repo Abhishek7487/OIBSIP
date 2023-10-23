@@ -20,7 +20,7 @@ html {
   --color-white: #fff;
   --color-dark: #000;
   --color-dark-mid: #0f0f0f;
-  --color-grey: #7a7a7a;
+  --color-dark-light: #1a1a1a;
 
   /* Fonts */
   --font-primary: "Bebas Neue", sans-serif;
@@ -28,7 +28,7 @@ html {
 }
 
 .container {
-  background-color: var(--color-grey);
+  background-color: var(--color-dark-light);
   min-height: max-content;
 }
 
@@ -77,7 +77,7 @@ html {
   font-weight: 600;
   font-family: var(--font-primary);
   letter-spacing: 0.6rem;
-  color: var(--color-grey);
+  color: var(--color-dark-light);
 }
 
 .homeText h1 {
@@ -101,16 +101,16 @@ html {
 /* ABOUT */
 
 .about {
-  height: 50rem;
+  height: 60rem;
   background: var(--color-dark);
-  margin: 0 12rem;
+  margin: 0 8rem;
   color: var(--color-white);
   position: relative;
 }
 
 .aboutCard {
   width: 75%;
-  height: 75%;
+  height: 60%;
   margin: 0 auto;
   display: flex;
   gap: 1rem;
@@ -120,7 +120,7 @@ html {
   position: absolute;
   top: -50%;
   left: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, 65%);
 }
 
 .aboutCard img {
@@ -134,6 +134,97 @@ html {
   font-weight: 400;
   line-height: 1.8;
   letter-spacing: 0.2rem;
+}
+
+/* BOOKS */
+.books {
+  height: 60rem;
+}
+
+.books .booksCard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+  margin: 0 16rem;
+  transform: translateY(-30%);
+  z-index: 6;
+}
+
+.booksCard .book {
+  position: relative;
+}
+
+.book img {
+  width: 100%;
+  height: 100%;
+}
+
+.book .bookContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.6rem 0;
+}
+
+.bookContent p {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  font-family: var(--font-secondary);
+  letter-spacing: 0.4rem;
+  color: var(--color-white);
+  opacity: 0.8;
+}
+
+.bookContent button {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  padding: 1rem 2.6rem;
+  border: 0.4rem solid var(--color-white);
+  background-color: transparent;
+  color: var(--color-white);
+  cursor: pointer;
+  opacity: 0.8;
+  transition: all 0.2s;
+}
+
+.bookContent button:hover {
+  background-color: var(--color-dark);
+}
+
+/* DREAM */
+
+.dream {
+  height: 100%;
+  background-color: var(--color-dark);
+  margin: 0 8rem;
+  transform: translateY(-30rem);
+  padding: 30rem 15rem 15rem 15rem;
+}
+
+.dreamCard {
+  color: var(--color-white);
+  display: flex;
+  background-color: var(--color-dark-light);
+}
+
+.dreamCard img {
+  width: 60rem;
+}
+
+.dreamCard p {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: var(--font-secondary);
+  font-size: 2rem;
+  padding: 2rem;
 }
 
 /* Media Queries */
@@ -194,6 +285,36 @@ html {
   .aboutCard p {
     padding: 4rem;
   }
+
+  .books {
+    display: flex;
+    align-items: center;
+  }
+
+  .books .booksCard {
+    transform: translateY(0);
+    margin: 0 4rem;
+  }
+
+  .bookContent p {
+    font-size: 1.8rem;
+  }
+
+  .dream {
+    transform: translateY(0);
+    margin: 0;
+    padding: 16rem 12rem;
+  }
+}
+
+@media screen and (max-width: 925px) {
+  .dream {
+    padding: 12rem 6rem;
+  }
+
+  .dreamCard img {
+    width: 40rem;
+  }
 }
 
 @media screen and (max-width: 695px) {
@@ -228,6 +349,35 @@ html {
     text-align: center;
     padding: 0 4rem;
   }
+
+  .books {
+    height: 100%;
+    padding: 4rem 0;
+  }
+
+  .books .booksCard {
+    grid-template-columns: repeat(2, 1fr);
+    transform: translate(0);
+    left: 0;
+    top: 0;
+  }
+
+  .dream {
+    padding: 6rem;
+  }
+
+  .dreamCard {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dreamCard img {
+    width: 100%;
+  }
+
+  .dreamCard p {
+    gap: 2rem;
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -242,5 +392,12 @@ html {
 
   .homeText p {
     font-size: 2rem;
+    letter-spacing: 0;
+    padding: 2rem;
+  }
+
+  .bookContent p,
+  .bookContent button {
+    font-size: 1.4rem;
   }
 }
