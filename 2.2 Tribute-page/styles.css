@@ -19,7 +19,7 @@ html {
   /* Colors */
   --color-white: #fff;
   --color-dark: #000;
-  --color-dark-mid: #1a1a1a;
+  --color-dark-mid: #0f0f0f;
   --color-grey: #7a7a7a;
 
   /* Fonts */
@@ -28,14 +28,16 @@ html {
 }
 
 .container {
-  background-color: var(--color-dark-mid);
-  min-width: max-content;
+  background-color: var(--color-grey);
+  min-height: max-content;
 }
+
+/* HOME */
 
 .home {
   height: 100vb;
   width: 100%;
-  background-color: var(--color-dark);
+  background-color: var(--color-dark-mid);
   color: var(--color-white);
   display: flex;
   align-items: end;
@@ -96,6 +98,46 @@ html {
   padding-top: 4rem;
 }
 
+/* ABOUT */
+
+.about {
+  height: 50rem;
+  background: var(--color-dark);
+  margin: 0 12rem;
+  color: var(--color-white);
+  position: relative;
+}
+
+.aboutCard {
+  width: 75%;
+  height: 75%;
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-dark-mid);
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.aboutCard img {
+  height: 100%;
+}
+
+.aboutCard p {
+  padding: 6rem;
+  font-size: 1.8rem;
+  font-family: var(--font-secondary);
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0.2rem;
+}
+
+/* Media Queries */
+
 @media screen and (max-width: 1350px) {
   html {
     font-size: 54.5%;
@@ -137,6 +179,21 @@ html {
   .homeText h1 {
     opacity: 1;
   }
+
+  .about {
+    margin: 0;
+  }
+
+  .aboutCard {
+    transform: translate(0);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .aboutCard p {
+    padding: 4rem;
+  }
 }
 
 @media screen and (max-width: 695px) {
@@ -146,6 +203,30 @@ html {
 
   .homeText h1 {
     font-size: 6.8rem;
+  }
+
+  .about {
+    height: 75rem;
+  }
+
+  .aboutCard {
+    flex-direction: column-reverse;
+    justify-content: center;
+    padding: 4rem 0;
+    gap: 4rem;
+    width: 80%;
+    height: 80%;
+    border-radius: 0.5rem;
+  }
+
+  .aboutCard img {
+    height: 50%;
+    border-radius: 0.5rem;
+  }
+
+  .aboutCard p {
+    text-align: center;
+    padding: 0 4rem;
   }
 }
 
