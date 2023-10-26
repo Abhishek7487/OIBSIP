@@ -63,7 +63,7 @@ html {
 .homeText .headline {
   position: absolute;
   top: 8rem;
-  left: 50%;
+  left: 55%;
   transform: translateX(-50%);
   font-size: 3.6rem;
   font-weight: 600;
@@ -248,6 +248,10 @@ html {
     background-image: url("/images/apj8.jpg");
     background-size: cover;
     background-position: center;
+  }
+
+  .homeText .headline {
+    left: 50%;
   }
 
   .overlay {
