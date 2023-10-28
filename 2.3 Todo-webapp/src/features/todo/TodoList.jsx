@@ -1,4 +1,8 @@
+import { useSelector } from "react-redux";
+import TodoItem from "./TodoItem";
+
 function TodoList() {
+  const taskList = useSelector((state) => state.todo.taskList);
   return (
     <div className="todoListContainer">
       <div className="todoListFilter">
@@ -6,16 +10,9 @@ function TodoList() {
         <p>Completed</p>
       </div>
       <div className="todoList">
-        {/* <div className="todo">
-          <img src="/src/assets/blob-high.svg" alt="blobHigh" />
-          <input type="text" value="Read 15 pages of book" />
-          <img className="editBtn" src="/src/assets/edit.svg" alt="editSvg" />
-          <img
-            className="completeBtn"
-            src="/src/assets/tick.svg"
-            alt="tickSvg"
-          />
-        </div> */}
+        {taskList.map((task) => (
+          <TodoItem todo={task} key={task.id} />
+        ))}
       </div>
     </div>
   );
