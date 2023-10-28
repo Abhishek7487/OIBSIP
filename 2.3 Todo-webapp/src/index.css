@@ -1,0 +1,25 @@
+/* Inter Font Family */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap");
+
+/* Global Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Inter", sans-serif;
+}
+
+/* Variables */
+:root {
+  --color-primary-dark: #5946a6;
+  --color-primary-mid: #987eff;
+  --color-primary-light: #a18aff;
+  --color-secondary: #ffffff;
+  --color-blob-high: #fd99af;
+  --color-blob-mid: #fac608;
+  --color-blob-low: #3fd4f4;
+}
