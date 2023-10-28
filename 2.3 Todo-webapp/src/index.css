@@ -1,5 +1,5 @@
-/* Inter Font Family */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap");
+/* Font Families */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Outfit:wght@400;500;600&display=swap");
 
 /* Global Styles */
 * {
@@ -22,4 +22,252 @@ html {
   --color-blob-high: #fd99af;
   --color-blob-mid: #fac608;
   --color-blob-low: #3fd4f4;
+
+  --color-text: #717082;
+}
+
+.app {
+  height: 100vb;
+  background-color: var(--color-primary-mid);
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.todoCard {
+  height: 90%;
+  width: 80%;
+  background-color: var(--color-primary-light);
+  border: 0.6rem solid var(--color-secondary);
+  border-radius: 1rem;
+  display: flex;
+  overflow: hidden;
+}
+
+.todoSidebar {
+  width: 25%;
+  background-color: var(--color-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 4.6rem;
+  padding: 2.8rem 3.6rem;
+}
+
+.todoUser {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 3.6rem;
+  border-bottom: 0.3rem solid var(--color-primary-light);
+}
+
+.todoUser img {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.todoUser p {
+  font-size: 1.6rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.6rem;
+}
+
+.todoUser p span:last-child {
+  color: var(--color-primary-light);
+  font-size: 1.8rem;
+}
+
+.todoFilter {
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+}
+
+.filterByPriority,
+.filterPending,
+.filterCompleted {
+  display: flex;
+  align-items: start;
+  gap: 2rem;
+}
+
+.filterByPriority img,
+.filterPending img,
+.filterCompleted img {
+  height: 2rem;
+}
+
+.filterByPriority p,
+.filterPending p,
+.filterCompleted p {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.filterPriorities {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.filterPriority {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.filterPriority,
+.filterPending,
+.filterCompleted {
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.filterPriority p:hover,
+.filterPending p:hover,
+.filterCompleted p:hover {
+  font-weight: 600;
+}
+
+.todoWindow {
+  width: 75%;
+  background-color: var(--color-primary-light);
+  display: flex;
+  flex-direction: column;
+  padding: 4.8rem 6.8rem;
+  gap: 4rem;
+  overflow: auto;
+}
+
+.todoWindow::-webkit-scrollbar {
+  display: none;
+}
+
+.todoWindow .quote {
+  height: 20%;
+  font-size: 4.2rem;
+  font-weight: 500;
+  font-family: "Outfit", sans-serif;
+  color: var(--color-secondary);
+}
+
+.createTodo {
+  background-color: var(--color-secondary);
+  width: 100%;
+  padding: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 2.4rem;
+}
+
+.createTodo select {
+  height: 3.6rem;
+  width: 20%;
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  color: var(--color-text);
+  border: none;
+}
+
+.createTodo input {
+  height: 100%;
+  width: 70%;
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  color: var(--color-text);
+  border: none;
+  border-left: 0.2rem solid var(--color-text);
+  padding: 0 1.2rem;
+  padding-left: 2rem;
+}
+
+.createTodo input::placeholder {
+  opacity: 0.7;
+}
+
+.createTodo select:focus,
+.createTodo input:focus {
+  outline: none;
+}
+
+.createTodo .saveBtn {
+  height: 2.4rem;
+  cursor: pointer;
+}
+
+.todoListContainer {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  padding: 1rem 0 3.6rem 0;
+}
+
+.todoListFilter {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.todoListFilter p {
+  width: 14rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  background-color: var(--color-secondary);
+  padding: 1.2rem 0;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 1.2rem;
+}
+
+.todoList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Temprory Testing */
+
+.todo {
+  background-color: var(--color-secondary);
+  width: 100%;
+  padding: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 2.4rem;
+}
+
+.todo input {
+  height: 100%;
+  width: 80%;
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  color: var(--color-text);
+  border: none;
+  padding: 0 1.2rem;
+  padding-left: 2rem;
+}
+
+.todo input:focus {
+  outline: none;
+}
+
+.todo img {
+  height: 2.4rem;
+  cursor: pointer;
 }

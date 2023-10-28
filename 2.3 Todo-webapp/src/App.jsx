@@ -1,5 +1,11 @@
+import TodoCard from "./features/todo/TodoCard";
+
 function App() {
-  return <h1>Todo Webapp</h1>;
+  return (
+    <div className="app">
+      <TodoCard />
+    </div>
+  );
 }
 
 export default App;
