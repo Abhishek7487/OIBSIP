@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
-import { editTodo } from "./todoSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { completeTodo, editTodo } from "./todoSlice";
+import { useDispatch } from "react-redux";
 
 function TodoItem({ todo }) {
   const dispatch = useDispatch();
@@ -23,10 +23,9 @@ function TodoItem({ todo }) {
     dispatch(editTodo(editedTodo));
   }
 
-  console.log(
-    "Edited: ",
-    useSelector((state) => state.todo.taskList)
-  );
+  function handleCompleteTodo() {
+    dispatch(completeTodo(todo.id));
+  }
 
   return (
     <div className="todo">
@@ -57,7 +56,12 @@ function TodoItem({ todo }) {
           onClick={handleEditTodo}
         />
       )}
-      <img className="completeBtn" src="/src/assets/tick.svg" alt="tickSvg" />
+      <img
+        className="completeBtn"
+        src="/src/assets/tick.svg"
+        alt="tickSvg"
+        onClick={handleCompleteTodo}
+      />
     </div>
   );
 }

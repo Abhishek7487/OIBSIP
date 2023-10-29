@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { addTodo } from "./todoSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 function CreateTodo() {
   const dispatch = useDispatch();
@@ -13,11 +13,6 @@ function CreateTodo() {
     setPriority("high");
     setTask("");
   }
-
-  console.log(
-    "Added: ",
-    useSelector((state) => state.todo.taskList)
-  );
 
   return (
     <div className="createTodo">
