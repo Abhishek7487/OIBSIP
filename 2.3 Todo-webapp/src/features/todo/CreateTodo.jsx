@@ -4,13 +4,13 @@ import { useDispatch } from "react-redux";
 
 function CreateTodo() {
   const dispatch = useDispatch();
-  const [priority, setPriority] = useState("high");
+  const [priority, setPriority] = useState("");
   const [task, setTask] = useState("");
 
   function handleAddTodo() {
     const todo = { priority, task };
-    dispatch(addTodo(todo));
-    setPriority("high");
+    priority && task && dispatch(addTodo(todo));
+    setPriority("");
     setTask("");
   }
 
@@ -21,7 +21,9 @@ function CreateTodo() {
         value={priority}
         onChange={(e) => setPriority(e.target.value)}
       >
-        <option disabled>Task Priority</option>
+        <option disabled selected value="">
+          Task Priority
+        </option>
         <option value="high" selected>
           High
         </option>

@@ -1,29 +1,42 @@
+import { useDispatch } from "react-redux";
+import { filterTodoList } from "./todoSlice";
+
 function TodoFilter() {
+  const dispatch = useDispatch();
+
   return (
     <div className="todoFilter">
       <div className="filterByPriority">
         <img src="/src/assets/filter.svg" alt="filterSvg" />
         <div className="filterPriorities">
-          <p>Filter by Priority</p>
+          <p>
+            Filter Pending Tasks <br /> by Priority
+          </p>
           <div className="filterPriority">
             <img src="/src/assets/blob-high.svg" alt="highBlob" />
-            <p>High</p>
+            <p onClick={() => dispatch(filterTodoList("high"))}>High</p>
           </div>
           <div className="filterPriority">
             <img src="/src/assets/blob-mid.svg" alt="midBlob" />
-            <p>Medium</p>
+            <p onClick={() => dispatch(filterTodoList("medium"))}>Medium</p>
           </div>
           <div className="filterPriority">
             <img src="/src/assets/blob-low.svg" alt="lowBlob" />
-            <p>Low</p>
+            <p onClick={() => dispatch(filterTodoList("low"))}>Low</p>
           </div>
         </div>
       </div>
-      <div className="filterPending">
+      <div
+        className="filterPending"
+        onClick={() => dispatch(filterTodoList("pending"))}
+      >
         <img src="/src/assets/pending.svg" alt="pendingSvg" />
         <p>Pending Tasks</p>
       </div>
-      <div className="filterCompleted">
+      <div
+        className="filterCompleted"
+        onClick={() => dispatch(filterTodoList("completed"))}
+      >
         <img src="/src/assets/tick.svg" alt="tickSvg" />
         <p>Completed Tasks</p>
       </div>
