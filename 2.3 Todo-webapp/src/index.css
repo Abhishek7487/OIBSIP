@@ -34,6 +34,41 @@ html {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  position: relative;
+}
+
+/* Blobs */
+.blob1 {
+  height: 10rem;
+  width: 10rem;
+  position: absolute;
+  background-color: var(--color-blob-low);
+  border-radius: 50%;
+  left: 27%;
+  top: -2%;
+  z-index: 5;
+}
+
+.blob2 {
+  height: 20rem;
+  width: 20rem;
+  position: absolute;
+  background-color: var(--color-blob-mid);
+  border-radius: 50%;
+  right: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.blob3 {
+  height: 30rem;
+  width: 30rem;
+  position: absolute;
+  background-color: var(--color-blob-high);
+  border-radius: 50%;
+  left: 0;
+  bottom: -20%;
+  z-index: 5;
 }
 
 .todoCard {
@@ -44,6 +79,7 @@ html {
   border-radius: 1rem;
   display: flex;
   overflow: hidden;
+  z-index: 2;
 }
 
 .todoSidebar {
