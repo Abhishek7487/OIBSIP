@@ -38,7 +38,7 @@ function CreateTodo() {
       />
       <img
         className="saveBtn"
-        src="/src/assets/save.svg"
+        src="/save.svg"
         alt="saveSvg"
         onClick={handleAddTodo}
       />

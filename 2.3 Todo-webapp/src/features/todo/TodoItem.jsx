@@ -29,15 +29,9 @@ function TodoItem({ todo }) {
 
   return (
     <div className="todo">
-      {todo.priority === "high" && (
-        <img src="/src/assets/blob-high.svg" alt="blobHigh" />
-      )}
-      {todo.priority === "medium" && (
-        <img src="/src/assets/blob-mid.svg" alt="blobMid" />
-      )}
-      {todo.priority === "low" && (
-        <img src="/src/assets/blob-low.svg" alt="blobLow" />
-      )}
+      {todo.priority === "high" && <img src="/blob-high.svg" alt="blobHigh" />}
+      {todo.priority === "medium" && <img src="/blob-mid.svg" alt="blobMid" />}
+      {todo.priority === "low" && <img src="/blob-low.svg" alt="blobLow" />}
       <input
         ref={inputRef}
         type="text"
@@ -51,17 +45,19 @@ function TodoItem({ todo }) {
       {isEditing && (
         <img
           className="editBtn"
-          src="/src/assets/edit.svg"
+          src="/edit.svg"
           alt="editSvg"
           onClick={handleEditTodo}
         />
       )}
-      <img
-        className="completeBtn"
-        src="/src/assets/tick.svg"
-        alt="tickSvg"
-        onClick={handleCompleteTodo}
-      />
+      {todo.status === "pending" && (
+        <img
+          className="completeBtn"
+          src="/tick.svg"
+          alt="tickSvg"
+          onClick={handleCompleteTodo}
+        />
+      )}
     </div>
   );
 }
