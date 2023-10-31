@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
 import TodoItem from "./TodoItem";
-import { useState } from "react";
 import { filterTodoList } from "./todoSlice";
 
 function TodoList() {
