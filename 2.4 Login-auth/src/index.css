@@ -6,6 +6,196 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 100%;
+}
+
 body {
   font-family: "Outfit", sans-serif;
+}
+
+:root {
+  --color-primary: #abacd0;
+  --color-white: #fff;
+  --color-text: #574b69;
+  --color-primary-dark: #7a6895;
+}
+
+.homePage {
+  height: 100vh;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.actionBtns {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 20%;
+}
+
+.btn {
+  background: var(--color-primary-dark);
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.8rem;
+  width: 100%;
+  color: var(--color-white);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  box-shadow: 0 0 1rem rgba(122, 104, 149, 0.525);
+}
+
+.signUp,
+.login {
+  height: 100vb;
+  background-color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  height: 80%;
+  width: 58rem;
+  background-color: var(--color-white);
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: 4fr 5fr;
+  border: 0.2rem solid var(--color-white);
+}
+
+.card .cardImg {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("/public/bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.card .cardText {
+  width: 100%;
+  padding: 1rem 3.6rem;
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.cardText h1 {
+  font-size: 2.6rem;
+}
+
+.cardText form {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  align-items: start;
+}
+
+.cardText form div {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cardText form div label {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.cardText form div input {
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: 400;
+  border: none;
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 0.4rem;
+  color: var(--color-text);
+  opacity: 0.8;
+}
+
+.cardText form div input::placeholder {
+  color: var(--color-text);
+  opacity: 0.6;
+  font-size: 1.1rem;
+}
+
+.cardText form div input:focus {
+  outline: none;
+}
+
+.cardText p a {
+  color: #2193d2;
+}
+
+@media screen and (max-width: 980px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .card .cardImg {
+    display: none;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    width: 40rem;
+    height: 90%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 85%;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+  }
+
+  .signUp,
+  .login {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("/public/bg.jpeg");
+    background-size: cover;
+    background-position: start;
+    background-repeat: no-repeat;
+    align-items: end;
+  }
 }
